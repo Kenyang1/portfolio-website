@@ -1,5 +1,5 @@
 // This component defines the Hero Section of the portfolio website
-"use client";
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
@@ -33,7 +33,7 @@ const HeroSection = () => {
         <div className="col-span-7 place-self-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-4xl sm:text-4xl lg:text-4xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-              Hello, I'm Kenyang! {''} 
+              Hello, I'm Kenyang!
             </span>
             <br />
             <TypeAnimation
@@ -45,7 +45,7 @@ const HeroSection = () => {
                 'Mobile Developer',
                 500,
               ]}
-              wrapper="span"
+              wrapper="span" // Changed to lowercase "span"
               speed={50}
               repeat={Infinity}
             />
