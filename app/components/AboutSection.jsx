@@ -1,8 +1,10 @@
 "use client";
+// This component defines the About Section of the portfolio website
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 
+// Data for the tabs (Skills, Education, Experience)
 const TAB_DATA = [
     {
         title: "Skills",
@@ -46,27 +48,33 @@ const AboutSection = () => {
     const [tab, setTab] = useState("skills");
     const [isPending, startTransition] = useTransition();
 
+    // Function to handle tab changes
     const handleTabChange = (id) => {
         startTransition(() => {
             setTab(id);
         });
     };
 
+    // Return the JSX for the About Section
     return ( 
-        <section className="text-white">
+        <section id="about" className="text-white">
             <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px16">
+                {/* Image section on the left */}
                 <Image src="/images/about-image.jpg" width={500} height={500} />
+                {/* Content section on the right */}
                 <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
                     <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+                    {/* Main description */}
                     <p className="text-base lg:text-lg">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Sapiente ipsum error quidem corporis non sunt ea culpa, 
-                        at sint vero velit, exercitationem pariatur necessitatibus odio, 
-                        illum consequuntur minima deserunt reprehenderit. Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Consequuntur nulla inventore fugiat quis 
-                        magnam totam voluptas omnis excepturi assumenda, provident labore. 
-                        Dolore eaque, deserunt aperiam blanditiis enim odio molestiae ratione?
+                        I'm a freshman at Southern New Hampshire University 
+                        from Manchester, NH. I'm majoring in Computer Science and deeply involved in Breakthrough 
+                        Manchester, helping high schoolers with college prep. My coursework includes Intro to 
+                        App Development, Fundamentals of Programming, Calculus, and Discrete Mathematics. 
+                        Outside CS, I love reading, writing, playing music, and watching anime. My favorite anime
+                        of all time is Naruto! I'm also part of the Computer Science Student Association, 
+                        keen on software engineering and artificial intelligence.
                     </p>
+                    {/* Tab buttons */}
                     <div className="flex flex-row justify-start mt-8">
                         <TabButton 
                             selectTab={() => handleTabChange("skills")} 
@@ -87,7 +95,8 @@ const AboutSection = () => {
                             Experience 
                         </TabButton>
                     </div>
-                    <div className="mt-8">{TAB_DATA.find((t) => t.id ==tab).content} </div>
+                    {/* Render content based on selected tab */}
+                    <div className="mt-8">{TAB_DATA.find((t) => t.id === tab).content}</div>
                 </div>
             </div>
         </section>
@@ -95,4 +104,3 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
-
