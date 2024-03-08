@@ -13,10 +13,10 @@ const EmailSection = () => {
             subject: e.target.subject.value,
             message: e.target.message.value,
         };
-
+    
         const JSONdata = JSON.stringify(data);
         const endpoint = "/api/send";
-
+    
         const options = {
             method: 'POST',
             headers: {
@@ -24,14 +24,26 @@ const EmailSection = () => {
             },
             body: JSONdata,
         };
+    
+        try {
             const response = await fetch(endpoint, options);
-            const resData = await response.json();
+            if (!response.ok) {
+                throw new Error('Failed to send message.');
+            }
             
-            if (response.status == 200) {
+            const resData = await response.json();
+            console.log('resData:', resData); // Log the response data
+            if (response.status === 200) {
                 console.log('Message sent.');
                 setEmailSubmitted(true);
+            } else {
+                throw new Error('Failed to send message.');
             }
+        } catch (error) {
+            console.error('Error sending message:', error);
         }
+    };
+    
 
 
     return (
