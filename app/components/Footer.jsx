@@ -1,5 +1,5 @@
-// Footer component for the portfolio website
 import React from "react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container p-12 flex justify-between">
         {/* Logo image */}
         <span>
-          <img src="/images/logo-image.png" alt="logo-image" style={{ width: '120px' }} />
+          <Image src="/images/logo-image.png" alt="logo-image" width={120} height={120} />
         </span>
         {/* Copyright text */}
         <p className="text-slate-600">All rights reserved.</p>

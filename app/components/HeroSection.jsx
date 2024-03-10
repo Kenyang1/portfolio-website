@@ -1,5 +1,3 @@
-// This component defines the Hero Section of the portfolio website
-'use client';
 import React from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
@@ -33,7 +31,7 @@ const HeroSection = () => {
         <div className="col-span-7 place-self-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-4xl sm:text-4xl lg:text-4xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-              Hello, I'm Kenyang!
+              Hello, I&apos;m Kenyang!
             </span>
             <br />
             <TypeAnimation
@@ -53,7 +51,7 @@ const HeroSection = () => {
           {/* Hero Section description */}
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             Driven by an unwavering passion for technology, 
-            I am on a mission to reshape the world's landscape, one innovation at a time. 
+            I am on a mission to reshape the world&apos;s landscape, one innovation at a time. 
             Join me in harnessing the boundless potential of technology to create a brighter, 
             more connected future for all.
           </p>

@@ -30,10 +30,11 @@ const EmailSection = () => {
       <div>
         {/* Ensure proper positioning of the bunny image */}
         <div className="relative">
-          <img
+          <Image
             src="/images/bunny.png"
             alt="Bunny Image"
-            style={{ width: "250px" }}
+            width={250} // Set the width directly
+            height={250} // Set the height directly
           />
         </div>
         <form
