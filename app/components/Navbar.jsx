@@ -1,8 +1,8 @@
-// Navbar component for the portfolio website
 "use client";
 import React, { useState } from "react";
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-scroll';
+import Image from "next/image"; // Import Image component
 
 import NavLink from "./NavLink";
 import MenuOverlay from "./MenuOverlay";
@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         {/* Logo linking to home page */}
         <Link href={"/"}>
-          <img src="/images/logo-image.png" alt="logo-image" style={{ width: '130px' }} />
+          <Image src="/images/logo-image.png" alt="logo-image" width={130} height={130} /> {/* Updated to use Image */}
         </Link>
 
         {/* Mobile menu button */}

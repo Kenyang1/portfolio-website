@@ -1,5 +1,4 @@
 "use client";
-// This component defines the About Section of the portfolio website
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
@@ -56,22 +55,22 @@ const AboutSection = () => {
     };
 
     // Return the JSX for the About Section
-    return ( 
+    return (
         <section id="about" className="text-white">
             <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px16">
                 {/* Image section on the left */}
-                <Image src="/images/about-image.jpg" width={500} height={500} />
+                <Image src="/images/about-image.jpg" width={500} height={500} alt="About Image" /> {/* Add alt prop */}
                 {/* Content section on the right */}
                 <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
                     <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
                     {/* Main description */}
                     <p className="text-base lg:text-lg">
-                        I'm a freshman at Southern New Hampshire University 
-                        from Manchester, NH. I'm majoring in Computer Science and deeply involved in Breakthrough 
+                        I&apos;m a freshman at Southern New Hampshire University 
+                        from Manchester, NH. I&apos;m majoring in Computer Science and deeply involved in Breakthrough 
                         Manchester, helping high schoolers with college prep. My coursework includes Intro to 
                         App Development, Fundamentals of Programming, Calculus, and Discrete Mathematics. 
                         Outside CS, I love reading, writing, playing music, and watching anime. My favorite anime
-                        of all time is Naruto! I'm also part of the Computer Science Student Association, 
+                        of all time is Naruto! I&apos;m also part of the Computer Science Student Association, 
                         keen on software engineering and artificial intelligence.
                     </p>
                     {/* Tab buttons */}
