@@ -11,10 +11,10 @@ const EmailSection = () => {
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stop))] from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10 relative"> {/* Adjust z-index */}
-        <h5 className="text-xl font-bold text-white my-2">Let&apos;s Connect</h5>
+        <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          I&apos;m actively seeking new opportunities and welcome any inquiries or
-          greetings you may have. Don&apos;t hesitate to reach out – I&apos;ll do my
+          I'm actively seeking new opportunities and welcome any inquiries or
+          greetings you may have. Don't hesitate to reach out – I'll do my
           utmost to respond promptly, whether you have a question or simply
           want to connect!
         </p>
@@ -30,11 +30,10 @@ const EmailSection = () => {
       <div>
         {/* Ensure proper positioning of the bunny image */}
         <div className="relative">
-          <Image
+          <img
             src="/images/bunny.png"
             alt="Bunny Image"
-            width={250} // Set the width directly
-            height={250} // Set the height directly
+            style={{ width: "250px" }}
           />
         </div>
         <form

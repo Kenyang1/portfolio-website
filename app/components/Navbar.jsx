@@ -1,16 +1,17 @@
+// Navbar component for the portfolio website
 "use client";
 import React, { useState } from "react";
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-scroll';
-import Image from "next/image"; // Import Image component
 
 import NavLink from "./NavLink";
 import MenuOverlay from "./MenuOverlay";
 
+// Array of navigation links with titles and corresponding section IDs
 const navLinks = [
   {
     title: "About",
-    path: "#about",
+    path: "#about", // ID of the section you want to scroll to
   },
   {
     title: "Projects",
@@ -26,11 +27,12 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
+    // Navigation bar with a fixed position at the top
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-90">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         {/* Logo linking to home page */}
         <Link href={"/"}>
-          <Image src="/images/logo-image.png" alt="logo-image" width={130} height={130} /> {/* Updated to use Image */}
+          <img src="/images/logo-image.png" alt="logo-image" style={{ width: '130px' }} />
         </Link>
 
         {/* Mobile menu button */}
