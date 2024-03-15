@@ -12,7 +12,7 @@ const projectData = [
     description: "Project 1 description",
     image: "/images/1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/Kenyang1/Bank-Account-Web-Application",
     previewUrl: "/",
   },
   { 
